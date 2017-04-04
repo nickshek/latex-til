@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage{hyperref}
+\usepackage{comment}
 
 \RequirePackage{fontspec}
 \RequirePackage{xeCJK}
@@ -8,6 +9,38 @@
 \setCJKmainfont{Droid Sans Fallback}
 \XeTeXlinebreaklocale "zh"
 \XeTeXlinebreakskip = 0pt plus 1pt
+
+\begin{comment}
+start: some settings for programming block
+\end{comment}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\begin{comment}
+end: some settings for programming block
+\end{comment}
 
 \title{Today I learned.今日我所學}
 \author{Nick Shek}
@@ -45,6 +78,25 @@
 \begin{itemize}
 \item Jenkins: \href{https://www.youtube.com/watch?v=UqTD4gQz76g}{https://www.youtube.com/watch?v=UqTD4gQz76g}
 \item Laravel: \href{https://www.youtube.com/watch?v=KHiRaK7hlCo}{https://www.youtube.com/watch?v=KHiRaK7hlCo}
+\end{itemize}
+
+\section{Linux}
+
+\begin{itemize}
+\item How to view files in binary in the terminal?
+
+bin:
+\begin{lstlisting}
+xxd -b <file>
+\end{lstlisting}
+
+hex:
+\begin{lstlisting}
+xxd <file>
+\end{lstlisting}
+
+Source: \href{http://stackoverflow.com/questions/1765311/how-to-view-files-in-binary-in-the-terminal}{http://stackoverflow.com/questions/1765311/how-to-view-files-in-binary-in-the-terminal}
+
 \end{itemize}
 
 \end{document}
