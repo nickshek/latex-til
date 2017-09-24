@@ -9,9 +9,11 @@
 \XeTeXlinebreaklocale "zh"
 \XeTeXlinebreakskip = 0pt plus 1pt
 
+\usepackage{listings}
+
 \title{Today I learned.今日我所學}
 \author{Nick Shek}
-\date{2017-02-07}
+\date{2017-09-24}
 
 \begin{document}
 
@@ -40,8 +42,23 @@
 \item Create Table of contents in Latex \href{https://www.sharelatex.com/learn/Table\_of\_contents}{https://www.sharelatex.com/learn/Table\_of\_contents}
 \end{itemize}
 
+\section{Oracle database}
+\begin{itemize}
+\item Check if a table exists in the current database schema
+\begin{lstlisting}
+SELECT table_name
+  FROM user_tables
+ WHERE table_name = 'TABLE_NAME';
+\end{lstlisting}
+\end{itemize}
 
-
+\section{Mac OS X (10.3 or above)}
+\begin{itemize}
+\item Install a new font
+  \begin{itemize}
+    Double-click the font file > "Install font" button at the bottom of the preview.
+  \end{itemize}
+\end{itemize}
 
 
 \end{document}
